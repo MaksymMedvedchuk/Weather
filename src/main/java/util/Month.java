@@ -1,5 +1,9 @@
 package util;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
 public enum Month {
     JANUARY("January"),
     FEBRUARY("February"),
@@ -22,5 +26,9 @@ public enum Month {
 
     public String getMonth() {
         return name;
+    }
+
+    public static List<String> getMonths() {
+        return Arrays.stream(Month.values()).sequential().map(Month::getMonth).collect(Collectors.toList());
     }
 }

@@ -6,7 +6,7 @@
 //
 
 
-package dto;
+package model;
 
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlElementDecl;
@@ -72,5 +72,6 @@ public class ObjectFactory {
     public JAXBElement<Year> createYear(Year value) {
         return new JAXBElement<Year>(_Year_QNAME, Year.class, null, value);
     }
+
 
 }

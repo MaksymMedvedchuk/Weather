@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.com/year"
+            elementFormDefault="qualified" xmlns="http://www.example.com/year">
+    <xsd:element name="year" type="year"/>
+
+    <xsd:complexType name="year">
+        <xsd:sequence>
+            <xsd:element name="month" type="month" maxOccurs="12" minOccurs="12"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="month">
+        <xsd:sequence>
+            <xsd:element name="monthName" type="monthName"/>
+            <xsd:element name="day" type="day" minOccurs="28" maxOccurs="31">
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:simpleType name="monthName">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="February"/>
+            <xsd:enumeration value="March"/>
+            <xsd:enumeration value="April"/>
+            <xsd:enumeration value="May"/>
+            <xsd:enumeration value="June"/>
+            <xsd:enumeration value="July"/>
+            <xsd:enumeration value="August"/>
+            <xsd:enumeration value="September"/>
+            <xsd:enumeration value="October"/>
+            <xsd:enumeration value="November"/>
+            <xsd:enumeration value="December"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:complexType name="day">
+        <xsd:sequence>
+            <xsd:element name="dayNumber">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:integer">
+                        <xsd:maxInclusive value="31"/>
+                        <xsd:minInclusive value="1"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="temperature">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:integer">
+                        <xsd:maxInclusive value="30"/>
+                        <xsd:minInclusive value="-30"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

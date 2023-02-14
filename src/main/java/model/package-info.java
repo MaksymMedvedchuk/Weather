@@ -6,4 +6,4 @@
 //
 
 @javax.xml.bind.annotation.XmlSchema(namespace = "http://www.example.com/year", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
-package dto;
+package model;

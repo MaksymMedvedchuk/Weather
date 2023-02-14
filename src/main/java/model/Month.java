@@ -6,27 +6,29 @@
 //
 
 
-package dto;
+package model;
 
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for year complex type.
+ * <p>Java class for month complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="year">
+ * &lt;complexType name="month">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="month" type="{http://www.example.com/year}month" maxOccurs="12" minOccurs="12"/>
+ *         &lt;element name="monthName" type="{http://www.example.com/year}monthName"/>
+ *         &lt;element name="day" type="{http://www.example.com/year}day" maxOccurs="31" minOccurs="28"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -36,41 +38,69 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "year", propOrder = {
-    "month"
+@XmlType(name = "month", propOrder = {
+    "monthName",
+    "day"
 })
-public class Year {
+public class Month {
 
     @XmlElement(required = true)
-    protected List<Month> month;
+    @XmlSchemaType(name = "string")
+    protected MonthName monthName;
+    @XmlElement(required = true)
+    protected List<Day> day;
 
     /**
-     * Gets the value of the month property.
+     * Gets the value of the monthName property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link MonthName }
+     *     
+     */
+    public MonthName getMonthName() {
+        return monthName;
+    }
+
+    /**
+     * Sets the value of the monthName property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link MonthName }
+     *     
+     */
+    public void setMonthName(MonthName value) {
+        this.monthName = value;
+    }
+
+    /**
+     * Gets the value of the day property.
      * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the month property.
+     * This is why there is not a <CODE>set</CODE> method for the day property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
-     *    getMonth().add(newItem);
+     *    getDay().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link Month }
+     * {@link Day }
      * 
      * 
      */
-    public List<Month> getMonth() {
-        if (month == null) {
-            month = new ArrayList<Month>();
+    public List<Day> getDay() {
+        if (day == null) {
+            day = new ArrayList<Day>();
         }
-        return this.month;
+        return this.day;
     }
 
 }

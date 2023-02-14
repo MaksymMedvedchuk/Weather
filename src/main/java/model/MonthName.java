@@ -6,7 +6,7 @@
 //
 
 
-package dto;
+package model;
 
 import javax.xml.bind.annotation.XmlEnum;
 import javax.xml.bind.annotation.XmlEnumValue;
@@ -81,5 +81,4 @@ public enum MonthName {
         }
         throw new IllegalArgumentException(v);
     }
-
 }
