@@ -1,3 +1,4 @@
-out/
-/.idea
-/Weather.iml
+/.idea/
+/target/
+Weather.iml
+/out/
