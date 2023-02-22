@@ -103,4 +103,11 @@ public class Month {
         return this.day;
     }
 
+    @Override
+    public String toString() {
+        return "Month{" +
+                "monthName=" + monthName +
+                ", day=" + day + "\n" +
+                '}';
+    }
 }

@@ -72,4 +72,11 @@ public class Year {
         }
         return this.month;
     }
+
+    @Override
+    public String toString() {
+        return "Year{" +
+                "month=" + month +
+                '}';
+    }
 }

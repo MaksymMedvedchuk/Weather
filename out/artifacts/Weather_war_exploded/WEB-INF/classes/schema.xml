@@ -124,7 +124,7 @@
     </day>
   </month>
   <month>
-    <monthName>November</monthName>
+    <monthName>June</monthName>
     <day>
       <dayNumber>1</dayNumber>
       <temperature>-25</temperature>
@@ -370,7 +370,7 @@
     </day>
   </month>
   <month>
-    <monthName>November</monthName>
+    <monthName>July</monthName>
     <day>
       <dayNumber>20</dayNumber>
       <temperature>-6</temperature>
@@ -469,7 +469,7 @@
     </day>
     <day>
       <dayNumber>12</dayNumber>
-      <temperature>27</temperature>
+      <temperature>-80</temperature>
     </day>
     <day>
       <dayNumber>19</dayNumber>
@@ -497,14 +497,14 @@
     </day>
   </month>
   <month>
-    <monthName>October</monthName>
+    <monthName>December</monthName>
     <day>
       <dayNumber>22</dayNumber>
-      <temperature>23</temperature>
+      <temperature>25</temperature>
     </day>
     <day>
       <dayNumber>8</dayNumber>
-      <temperature>-9</temperature>
+      <temperature>-4</temperature>
     </day>
     <day>
       <dayNumber>29</dayNumber>
@@ -624,7 +624,7 @@
     </day>
   </month>
   <month>
-    <monthName>April</monthName>
+    <monthName>September</monthName>
     <day>
       <dayNumber>28</dayNumber>
       <temperature>-17</temperature>

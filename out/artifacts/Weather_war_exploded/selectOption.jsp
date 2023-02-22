@@ -2,19 +2,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
-</head>
+    <title>Option</title></head>
 <body>
-<b></b>
-    Select month <select>
-    <c:forEach var="month" items="${months}">
-        <option value="${month}">${month}</option>
-    </c:forEach>
-</select>
-<br>
-<br>
-<br>
-    Select option <select>
+Select option <label for="currentOption"></label>
+<select id="currentOption" name="currentOption"
+        style="background-color: darkgray; font-weight: bold; color: black; font-size: 25px">
     <c:forEach var="option" items="${options}">
         <option value="${option}">${option}</option>
     </c:forEach>

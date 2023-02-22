@@ -18,17 +18,30 @@ public enum Month {
     NOVEMBER("November"),
     DECEMBER("December");
 
-    private String name;
+    private final String name;
 
     Month(String month) {
         this.name = month;
     }
 
-    public String getMonth() {
-        return name;
+    public static List<String> getMonths() {
+        return Arrays.stream(Month.values())
+                .sequential()
+                .map(Month::getMonth)
+                .collect(Collectors.toList());
     }
 
-    public static List<String> getMonths() {
-        return Arrays.stream(Month.values()).sequential().map(Month::getMonth).collect(Collectors.toList());
+    public static Month getByMonthValue(String string) {
+        for (Month month : values()) {
+            if (month.getMonth().equals(string)) {
+
+                return month;
+            }
+        }
+        throw new IllegalArgumentException("No enum found with month");
+    }
+
+    public String getMonth() {
+        return name;
     }
 }

@@ -89,4 +89,11 @@ public class Day {
         this.temperature = value;
     }
 
+    @Override
+    public String toString() {
+        return "Day{" +
+                "dayNumber=" + dayNumber +
+                ", temperature=" + temperature +
+                '}';
+    }
 }
