@@ -34,7 +34,6 @@ public enum Month {
     public static Month getByMonthValue(String string) {
         for (Month month : values()) {
             if (month.getMonth().equals(string)) {
-
                 return month;
             }
         }

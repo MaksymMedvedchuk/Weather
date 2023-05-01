@@ -51,9 +51,7 @@ public class OptionsServlet extends HttpServlet {
             } else if (optionValue.equals(Options.FORTH_OPTION)) {
                 request.setAttribute(RESULT_ATTRIBUTE, weatherService.getThreeWarmestDays(Month.getByMonthValue(month)));
             }
-
             request.getRequestDispatcher(RESULT_JSP).forward(request, response);
-
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
